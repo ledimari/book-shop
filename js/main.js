@@ -1,17 +1,17 @@
 const constrain = 50
 
-const transform = (x, y, el) => {
+const transform = (el, e) => {
   const box = el.getBoundingClientRect()
 
-  const rotateX = -(y - box.y - (box.height / 2)) / constrain
-  const rotateY = (x - box.x - (box.width / 2)) / constrain
+  const rotateX = -(e.clientY - box.y - (box.height / 2)) / constrain
+  const rotateY = (e.clientX - box.x - (box.width / 2)) / constrain
 
   const speed = el.getAttribute("data-speed")
 
-  const transformX = (window.innerWidth - e.pageX * speed) / 100
-  const transformY = (window.innerHeight - e.pageY * speed) / 100
+  const translateX = (window.innerWidth - e.pageX * speed) / 100
+  const translateY = (window.innerHeight - e.pageY * speed) / 100
 
-  return `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) `
+  return `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${translateX}px) translateY(${translateY}px)`
 }
 
 const handleMouseMove = (e) => {
@@ -20,7 +20,7 @@ const handleMouseMove = (e) => {
   sectionSaleImg.forEach((img) => {
 
     window.requestAnimationFrame(() => {
-      img.style.transform = transform(e.clientX, e.clientY, img)
+      img.style.transform = transform(img, e)
     })
   })
 }
