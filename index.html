@@ -3,12 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Book Shop</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  Hello world!
+
+<!-- Header start -->
+
+  <header class="header">
+    <div class="header__container">
+    <div class="header__left-side">
+      <img src="./img/logo.svg" alt="logo" class="header__logo">
+    </div>
+    <div class="header__center-side">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__item-text header__item-text-active">books</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__item-text">audiobooks</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__item-text">Stationery & gifts</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__item-text">blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__right-side">
+      <img src="./img/user.svg" alt="user" class="header__img-user">
+      <img src="./img/search.svg" alt="search" class="header__img-search">
+      <img src="./img/shop-bag.svg" alt="bag" class="header__img-bag">
+    </div>
+    </div>
+  </header>
+
+  <!-- Header and -->
+
+  <!-- Sale start -->
+
+  <section class="sale" id="sale">
+    <div class="sale__container">
+      <div class="sale__content">
+        <h2 class="sale__title">
+          big summer sale
+        </h2>
+        <div class="sale__numeral">
+          <img src="./img/sale-images/60.svg" alt="numeral" class="sale__numeral-img">
+        </div>
+      </div>
+      <div class="sale__people">
+        <img data-speed="5" src="./img/sale-images/sale-man-1.svg" alt="man" class="man-1 sale-img">
+        <img data-speed="2" src="./img/sale-images/sale-girl-1.svg" alt="girl" class="girl-1 sale-img">
+        <img data-speed="5" src="./img/sale-images/sale-man-2.svg" alt="man" class="man-2 sale-img">
+        <img data-speed="2" src="./img/sale-images/sale-girl-2.svg" alt="girl" class="girl-2 sale-img">
+      </div>
+
+      <div class="sale__block-violet">
+        <h2 class="block__violet-text">
+          Change old book on new
+        </h2>
+      </div>
+      <div class="sale__block-pink">
+        <h2 class="block__pink-text">
+          top 100 books 2019
+        </h2>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Sale end -->
+
+
+
+
   <script src="./js/main.js"></script>
 </body>
 </html>
